@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full overflow-hidden select-none">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>An Eternal Celestial Love Letter</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cinzel: ['Cinzel Decorative', 'serif'],
+            script: ['Great Vibes', 'cursive'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            cosmicVoid: '#020617',
+            roseGold: '#F472B6',
+            electricBlue: '#60A5FA',
+            starlightGold: '#FDE047',
+            deepViolet: '#1E1B4B'
+          },
+          animation: {
+            'float-soft': 'floatSoft 6s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+            'spin-celestial': 'spin 30s linear infinite',
+            'shimmer-border': 'shimmerBorder 4s linear infinite',
+          },
+          keyframes: {
+            floatSoft: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-12px) rotate(0.8deg)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.85', filter: 'drop-shadow(0 0 15px rgba(96, 165, 250, 0.4))' },
+              '50%': { opacity: '1', filter: 'drop-shadow(0 0 35px rgba(244, 114, 182, 0.8))' },
+            },
+            shimmerBorder: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' },
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Great+Vibes&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: rgba(2, 6, 23, 0.95); }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #60A5FA, #F472B6); border-radius: 9999px; }
+
+    /* Ultra-Luxury Glassmorphism */
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(28px) saturate(180%);
+      -webkit-backdrop-filter: blur(28px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 30px 80px -15px rgba(0, 0, 0, 0.8),
+                  inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    }
+
+    .glass-modal {
+      background: rgba(10, 15, 30, 0.88);
+      backdrop-filter: blur(40px) saturate(200%);
+      -webkit-backdrop-filter: blur(40px) saturate(200%);
+      border: 1px solid rgba(244, 114, 182, 0.25);
+      box-shadow: 0 0 100px rgba(96, 165, 250, 0.15),
+                  0 40px 100px rgba(0, 0, 0, 0.9);
+    }
+
+    .shimmer-edge {
+      position: relative;
+    }
+    .shimmer-edge::before {
+      content: '';
+      position: absolute;
+      inset: -1.5px;
+      background: linear-gradient(90deg, #60A5FA, #A7F3D0, #F472B6, #FDE047, #60A5FA);
+      background-size: 300% 300%;
+      border-radius: inherit;
+      z-index: -1;
+      opacity: 0.85;
+      animation: shimmerBorder 6s ease infinite;
+      filter: blur(6px);
+    }
+
+    /* Floating Text Balloon Physics Engine Styles */
+    .floating-phrase {
+      position: absolute;
+      pointer-events: none;
+      font-family: 'Great Vibes', cursive;
+      white-space: nowrap;
+      user-select: none;
+      z-index: 35;
+      animation: phraseFloat 4.2s cubic-bezier(0.12, 0.8, 0.25, 1) forwards;
+      text-shadow: 0 0 12px currentColor, 0 0 24px currentColor;
+    }
+
+    @keyframes phraseFloat {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, 20px) scale(0.7) rotate(-3deg);
+        filter: blur(8px);
+      }
+      18% {
+        opacity: 1;
+        transform: translate(-50%, -10px) scale(1.1) rotate(0deg);
+        filter: blur(0px);
+      }
+      80% {
+        opacity: 0.9;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -120px) scale(0.92) rotate(3deg);
+        filter: blur(6px);
+      }
+    }
+
+    /* Gradient Typography */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFFFFF 0%, #FDE047 50%, #F472B6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 12px rgba(253, 224, 71, 0.35));
+    }
+
+    .cyan-gradient-text {
+      background: linear-gradient(135deg, #FFFFFF 0%, #60A5FA 50%, #A7F3D0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 12px rgba(96, 165, 250, 0.35));
+    }
+
+    /* Prevent text highlight or canvas drag */
+    canvas {
+      touch-action: none;
+      display: block;
+    }
+  </style>
+</head>
+<body class="h-full w-full bg-cosmicVoid text-white font-sans overflow-hidden relative">
+
+  <!-- Ambient Cosmic Gradient Glow Spots in Background -->
+  <div class="fixed top-1/4 left-1/4 w-[500px] h-[500px] bg-electricBlue/10 rounded-full blur-[140px] pointer-events-none -translate-x-1/2 -translate-y-1/2 animate-pulse-glow"></div>
+  <div class="fixed bottom-1/3 right-1/4 w-[600px] h-[600px] bg-roseGold/10 rounded-full blur-[160px] pointer-events-none translate-x-1/3 translate-y-1/3 animate-pulse-glow" style="animation-delay: 1.5s;"></div>
+
+  <!-- Dual Canvas System -->
+  <!-- Layer 0: Background Stars & Shooting Stars -->
+  <canvas id="bgCanvas" class="fixed inset-0 w-full h-full z-0 pointer-events-none"></canvas>
+  <!-- Layer 1: Foreground Heart Fireworks, Touch Trails & Interactivity -->
+  <canvas id="fgCanvas" class="fixed inset-0 w-full h-full z-10"></canvas>
+
+  <!-- Sound Mute/Unmute Floating Controller -->
+  <div class="fixed top-6 right-6 z-50 flex items-center gap-3">
+    <button id="soundToggleBtn" class="glass-panel w-12 h-12 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:scale-110 active:scale-95 transition-all duration-300 border border-white/20 shadow-2xl group" title="Toggle Celestial Soundscape">
+      <i id="soundIcon" class="fa-solid fa-volume-xmark text-base group-hover:text-electricBlue transition-colors"></i>
+    </button>
+  </div>
+
+  <!-- MAIN INTERACTIVE CONTAINER -->
+  <div id="uiContainer" class="relative z-20 w-full h-full flex flex-col items-center justify-center p-4">
+
+    <!-- SCREEN 1: OPENING LUXURY CARD -->
+    <div id="openingCard" class="glass-panel shimmer-edge p-8 sm:p-12 rounded-3xl max-w-lg w-full text-center transform transition-all duration-1000 scale-100 opacity-100 cursor-pointer hover:scale-[1.015] active:scale-[0.99] animate-float-soft">
+      
+      <!-- Luminous Heart Seal Emblem -->
+      <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-6 rounded-full bg-gradient-to-tr from-roseGold/20 via-electricBlue/20 to-starlightGold/20 border border-starlightGold/40 flex items-center justify-center shadow-[0_0_35px_rgba(253,224,71,0.3)] animate-pulse-glow">
+        <i class="fa-solid fa-heart text-3xl sm:text-4xl text-roseGold drop-shadow-[0_0_18px_rgba(244,114,182,0.9)]"></i>
+      </div>
+
+      <span class="inline-block text-[11px] uppercase tracking-[0.35em] text-electricBlue font-bold mb-3 font-cinzel">Celestial Love Letter</span>
+      
+      <h1 class="font-cinzel text-2xl sm:text-3xl text-white font-bold mb-2 tracking-wide leading-tight">
+        <span id="openingTitleDisplay">To the one who holds my heart...</span>
+      </h1>
+
+      <p class="font-script text-3xl sm:text-4xl text-roseGold mb-4 font-light drop-shadow-[0_0_12px_rgba(244,114,182,0.6)]">
+        For My Dearest <span id="recipientDisplayName" class="gold-gradient-text">[RECIPIENT NAME]</span>
+      </p>
+      
+      <p id="subtitleDisplay" class="font-sans text-xs sm:text-sm text-white/80 font-light leading-relaxed mb-8 px-2 max-w-md mx-auto">
+        Every star in this sky shines a little brighter because of you. Tap anywhere to send a heart into the night.
+      </p>
+
+      <button id="openCardBtn" class="relative group px-8 py-4 rounded-full bg-gradient-to-r from-electricBlue via-indigo-600 to-roseGold text-white font-cinzel tracking-[0.2em] text-xs font-bold uppercase shadow-[0_0_30px_rgba(96,165,250,0.4)] hover:shadow-[0_0_50px_rgba(244,114,182,0.7)] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0">
+        <span class="relative z-10 flex items-center justify-center gap-2">
+          <span>Explore Our Universe</span>
+          <i class="fa-solid fa-sparkles text-xs group-hover:rotate-45 transition-transform duration-300"></i>
+        </span>
+      </button>
+    </div>
+
+    <!-- SCREEN 2: INTERACTIVE GALAXY HUD (Fades in after opening card) -->
+    <div id="skyHud" class="fixed inset-0 pointer-events-none flex flex-col justify-between p-6 sm:p-10 opacity-0 transition-opacity duration-1000 z-20">
+      
+      <!-- Top Instruction Banner -->
+      <div class="text-center pt-2 sm:pt-4">
+        <p class="font-cinzel text-[11px] sm:text-xs tracking-[0.3em] text-electricBlue uppercase drop-shadow-[0_0_10px_rgba(96,165,250,0.8)] animate-pulse">
+          <i class="fa-solid fa-wand-magic-sparkles mr-2"></i>Tap sky to launch firework • Drag to draw stardust
+        </p>
+      </div>
+
+      <!-- Center Hero Message Container -->
+      <div id="heroMsgContainer" class="pointer-events-auto self-center text-center max-w-lg mx-auto px-8 py-6 rounded-3xl glass-panel border border-white/20 cursor-pointer transform hover:scale-105 active:scale-95 transition-all duration-300 hover:border-roseGold/60 group shadow-[0_0_60px_rgba(0,0,0,0.8)]">
+        <p id="heroMsgText" class="font-script text-3xl sm:text-4xl text-white font-normal drop-shadow-[0_0_20px_rgba(255,255,255,0.9)] leading-snug">
+          "You make my world complete"
+        </p>
+        <span class="block text-[10px] uppercase tracking-[0.25em] text-roseGold/90 mt-2 font-cinzel group-hover:text-roseGold transition-colors">
+          ✦ Tap for a grand celestial explosion (<span id="tapCounterDisplay">0</span>/5) ✦
+        </span>
+      </div>
+
+      <!-- Bottom Secret Message Button Trigger -->
+      <div id="finalLetterPrompt" class="pointer-events-auto text-center transition-all duration-700 transform translate-y-20 opacity-0 pb-4">
+        <button id="readFinalLetterBtn" class="shimmer-edge px-8 sm:px-10 py-4 rounded-full bg-cosmicVoid/90 border border-roseGold text-white font-cinzel text-xs sm:text-sm uppercase tracking-[0.25em] font-bold shadow-[0_0_40px_rgba(244,114,182,0.5)] hover:shadow-[0_0_70px_rgba(96,165,250,0.8)] hover:scale-105 active:scale-95 transition-all duration-300">
+          ✨ Read My Final Love Letter ✨
+        </button>
+      </div>
+
+    </div>
+
+    <!-- SCREEN 3: LUXURY MODAL LOVE LETTER (Typewriter Reveal) -->
+    <div id="letterModal" class="fixed inset-0 z-40 flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-all duration-700 scale-95">
+      <div class="glass-modal max-w-2xl w-full max-h-[88vh] rounded-3xl p-6 sm:p-10 flex flex-col relative overflow-hidden">
+        
+        <!-- Ambient Backglow Effects inside Modal -->
+        <div class="absolute -top-32 -left-32 w-72 h-72 bg-electricBlue/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -right-32 w-72 h-72 bg-roseGold/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between pb-4 border-b border-white/15 relative z-10">
+          <div class="flex items-center gap-3">
+            <i class="fa-solid fa-crown text-starlightGold text-base"></i>
+            <span id="finalLetterTitleDisplay" class="font-cinzel text-xs sm:text-sm tracking-[0.25em] uppercase text-white/90">My Dearest Love</span>
+          </div>
+          <button id="closeModalBtn" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/80 hover:text-white transition-colors">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+
+        <!-- Typewriter Letter Body -->
+        <div class="my-6 overflow-y-auto pr-3 relative z-10 text-white/90 font-sans font-light text-base sm:text-lg leading-relaxed space-y-4">
+          <p id="typewriterBody" class="whitespace-pre-line tracking-wide">
+            <!-- Populated via JS Typewriter effect -->
+          </p>
+        </div>
+
+        <!-- Modal Footer Signature -->
+        <div class="pt-4 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
+          <div class="text-left w-full sm:w-auto">
+            <span id="finalClosingDisplay" class="block font-cinzel text-[11px] tracking-widest text-electricBlue uppercase">Forever and always yours,</span>
+            <span id="signatureName" class="font-script text-3xl gold-gradient-text">[YOUR NAME]</span>
+          </div>
+
+          <div class="flex gap-3 w-full sm:w-auto justify-end">
+            <button id="replayModalBtn" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-xs uppercase tracking-widest font-cinzel text-white/90 hover:text-white transition-all duration-300">
+              <i class="fa-solid fa-rotate-right mr-2"></i> Replay Magic
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT APPLICATION ENGINE -->
+  <script>
+    /* ========================================================================
+       1. TOP CONFIGURATION OBJECT (EASY CUSTOMIZATION)
+       ======================================================================== */
+    const CONFIG = {
+      recipientName: "[RECIPIENT NAME]",
+      senderName: "[YOUR NAME]",
+      openingMessage: "To the one who holds my heart...",
+      subtitleMessage: "Every star in this sky shines a little brighter because of you. Tap anywhere to send a heart into the night.",
+      finalLetterTitle: "My Dearest Love",
+      finalLetterBody: `[YOUR PERSONAL MESSAGE]
+
+From the moment you entered my life, everything became warmer, brighter, and infinitely more beautiful. You bring peace to my quiet moments and joy to my happiest days. This screen is just a small galaxy, but my love for you expands far beyond any horizon.`,
+      finalClosing: "Forever and always yours,",
+      particleColors: ['#60A5FA', '#93C5FD', '#A7F3D0', '#C4B5FD', '#F472B6', '#FFFFFF'],
+      floatingPhrases: [
+        "You are my favorite thought",
+        "My heart beats for you",
+        "Forever & always",
+        "You make my world complete",
+        "Thinking of you always",
+        "You are my sunshine",
+        "My whole heart"
+      ]
+    };
+
+    /* ========================================================================
+       2. WEB AUDIO SYNTHESIZER (HARMONIC CELESTIAL CHIMES & PADS)
+       ======================================================================== */
+    class CelestialAudioSynth {
+      constructor() {
+        this.ctx = null;
+        this.isMuted = true;
+        this.masterGain = null;
+        this.initialized = false;
+        this.padOscillators = [];
+      }
+
+      init() {
+        if (this.initialized) return;
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+
+        this.ctx = new AudioCtx();
+        this.masterGain = this.ctx.createGain();
+        this.masterGain.gain.setValueAtTime(0.15, this.ctx.currentTime);
+        this.masterGain.connect(this.ctx.destination);
+        this.initialized = true;
+      }
+
+      startAmbientPad() {
+        if (!this.ctx) this.init();
+        if (!this.ctx) return;
+        if (this.ctx.state === 'suspended') this.ctx.resume();
+
+        // Heavenly Ethereal Chord Notes (Frequencies in Hz)
+        const notes = [146.83, 220.00, 293.66, 370.00, 440.00]; // D3, A3, D4, F#4, A4
+
+        notes.forEach((freq, i) => {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+
+          osc.type = i % 2 === 0 ? 'sine' : 'triangle';
+          osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+
+          // Slight detune for rich ambient chorus
+          const lfo = this.ctx.createOscillator();
+          const lfoGain = this.ctx.createGain();
+          lfo.frequency.setValueAtTime(0.05 + i * 0.02, this.ctx.currentTime);
+          lfoGain.gain.setValueAtTime(1.5, this.ctx.currentTime);
+          lfo.connect(osc.frequency);
+          lfo.start();
+
+          gain.gain.setValueAtTime(0.0001, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.03, this.ctx.currentTime + 3);
+
+          osc.connect(gain);
+          gain.connect(this.masterGain);
+          osc.start();
+          this.padOscillators.push({ osc, gain, lfo });
+        });
+      }
+
+      playChime(multiplier = 1.0) {
+        if (this.isMuted || !this.ctx) return;
+        if (this.ctx.state === 'suspended') this.ctx.resume();
+
+        const now = this.ctx.currentTime;
+        // Pentatonic Harmony Scale
+        const scale = [587.33, 659.25, 739.99, 880.00, 987.77, 1174.66];
+        const freq = scale[Math.floor(Math.random() * scale.length)] * multiplier;
+
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now);
+        osc.frequency.exponentialRampToValueAtTime(freq * 1.15, now + 0.5);
+
+        gain.gain.setValueAtTime(0.1, now);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.2);
+
+        osc.connect(gain);
+        gain.connect(this.masterGain);
+
+        osc.start(now);
+        osc.stop(now + 1.3);
+      }
+
+      playTypewriterTone() {
+        if (this.isMuted || !this.ctx) return;
+        if (this.ctx.state === 'suspended') this.ctx.resume();
+
+        const now = this.ctx.currentTime;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(1200 + Math.random() * 300, now);
+
+        gain.gain.setValueAtTime(0.015, now);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.04);
+
+        osc.connect(gain);
+        gain.connect(this.masterGain);
+
+        osc.start(now);
+        osc.stop(now + 0.05);
+      }
+
+      toggleMute() {
+        this.init();
+        this.isMuted = !this.isMuted;
+
+        if (!this.isMuted) {
+          if (this.padOscillators.length === 0) this.startAmbientPad();
+          this.masterGain.gain.setValueAtTime(0.15, this.ctx.currentTime);
+        } else {
+          if (this.masterGain) this.masterGain.gain.setValueAtTime(0.0001, this.ctx.currentTime);
+        }
+        return this.isMuted;
+      }
+    }
+
+    const audio = new CelestialAudioSynth();
+
+    /* ==========================================================================
+       3. DUAL CANVAS RENDERER & HIGH-PRECISION PHYSICS ENGINE
+       ========================================================================== */
+    const bgCanvas = document.getElementById('bgCanvas');
+    const bgCtx = bgCanvas.getContext('2d');
+    const fgCanvas = document.getElementById('fgCanvas');
+    const fgCtx = fgCanvas.getContext('2d');
+
+    let width = 0;
+    let height = 0;
+    let dpr = window.devicePixelRatio || 1;
+
+    let stars = [];
+    let shootingStars = [];
+    let particles = [];
+    let stardustTrail = [];
+
+    // Delta Time Normalization Variables for smooth 60/120/144Hz
+    let lastFrameTime = performance.now();
+    let dt = 1.0;
+
+    // Resizing & Retina DPR Scaling
+    function resizeCanvas() {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      [bgCanvas, fgCanvas].forEach(c => {
+        c.width = width * dpr;
+        c.height = height * dpr;
+        c.style.width = `${width}px`;
+        c.style.height = `${height}px`;
+      });
+
+      bgCtx.scale(dpr, dpr);
+      fgCtx.scale(dpr, dpr);
+
+      initStarfield();
+    }
+
+    // Background Starfield Setup
+    function initStarfield() {
+      stars = [];
+      const density = Math.floor((width * height) / 2200);
+      for (let i = 0; i < density; i++) {
+        stars.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: Math.random() * 1.8 + 0.4,
+          color: CONFIG.particleColors[Math.floor(Math.random() * CONFIG.particleColors.length)],
+          baseAlpha: Math.random() * 0.7 + 0.2,
+          twinkleSpeed: 0.001 + Math.random() * 0.003,
+          phase: Math.random() * Math.PI * 2
+        });
+      }
+    }
+
+    // Spawn Random Shooting Stars
+    function spawnShootingStar() {
+      if (Math.random() > 0.015) return;
+      shootingStars.push({
+        x: Math.random() * width * 1.2 - width * 0.1,
+        y: Math.random() * height * 0.4,
+        length: Math.random() * 80 + 40,
+        speed: Math.random() * 12 + 8,
+        angle: Math.PI / 4 + (Math.random() - 0.5) * 0.2,
+        alpha: 1.0,
+        color: CONFIG.particleColors[Math.floor(Math.random() * CONFIG.particleColors.length)]
+      });
+    }
+
+    // Parametric Heart Formula
+    function getHeartPoint(t, scale = 12) {
+      const x = 16 * Math.pow(Math.sin(t), 3);
+      const y = -(13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));
+      return { x: x * scale, y: y * scale };
+    }
+
+    // High Performance Particle Class
+    class HeartParticle {
+      constructor(x, y, vx, vy, color, size, maxLife, isSparkle = false) {
+        this.x = x;
+        this.y = y;
+        this.vx = vx;
+        this.vy = vy;
+        this.color = color;
+        this.size = size;
+        this.maxLife = maxLife;
+        this.life = maxLife;
+        this.gravity = 0.035;
+        this.friction = 0.965;
+        this.isSparkle = isSparkle;
+      }
+
+      update(deltaTime) {
+        this.vx *= Math.pow(this.friction, deltaTime);
+        this.vy *= Math.pow(this.friction, deltaTime);
+        this.vy += this.gravity * deltaTime;
+
+        this.x += this.vx * deltaTime;
+        this.y += this.vy * deltaTime;
+
+        this.life -= deltaTime;
+      }
+
+      draw(context) {
+        const progress = Math.max(0, this.life / this.maxLife);
+        context.save();
+        context.globalAlpha = progress;
+        context.fillStyle = this.color;
+        context.shadowColor = this.color;
+        context.shadowBlur = this.isSparkle ? 16 : 6;
+
+        context.beginPath();
+        context.arc(this.x, this.y, this.size * (0.3 + progress * 0.7), 0, Math.PI * 2);
+        context.fill();
+        context.restore();
+      }
+    }
+
+    // Create Heart Firework Explosion
+    function triggerHeartBurst(originX, originY, scale = 11, particleCount = 130) {
+      const baseColor = CONFIG.particleColors[Math.floor(Math.random() * CONFIG.particleColors.length)];
+
+      for (let i = 0; i < particleCount; i++) {
+        const t = (Math.PI * 2 * i) / particleCount;
+        const pt = getHeartPoint(t, scale / 10);
+
+        const speed = 0.2 + Math.random() * 0.28;
+        const vx = pt.x * speed;
+        const vy = pt.y * speed;
+
+        const pColor = Math.random() > 0.3 ? baseColor : '#FFFFFF';
+        particles.push(new HeartParticle(
+          originX,
+          originY,
+          vx,
+          vy,
+          pColor,
+          Math.random() * 2.2 + 1.2,
+          75 + Math.random() * 45,
+          Math.random() > 0.5
+        ));
+      }
+
+      // Center Core Sparkles
+      for (let j = 0; j < 25; j++) {
+        const angle = Math.random() * Math.PI * 2;
+        const spd = Math.random() * 4.0;
+        particles.push(new HeartParticle(
+          originX,
+          originY,
+          Math.cos(angle) * spd,
+          Math.sin(angle) * spd,
+          '#FDE047',
+          Math.random() * 2.8 + 1.5,
+          40 + Math.random() * 25,
+          true
+        ));
+      }
+
+      audio.playChime(scale > 15 ? 1.35 : 1.0);
+    }
+
+    // Touch/Drag Stardust Trail
+    function addStardust(x, y) {
+      if (Math.random() > 0.4) return;
+      stardustTrail.push({
+        x: x + (Math.random() - 0.5) * 14,
+        y: y + (Math.random() - 0.5) * 14,
+        size: Math.random() * 12 + 8,
+        color: CONFIG.particleColors[Math.floor(Math.random() * CONFIG.particleColors.length)],
+        life: 28,
+        maxLife: 28
+      });
+    }
+
+    // Main Render Loop
+    function renderLoop(now) {
+      const delta = Math.min((now - lastFrameTime) / 16.667, 3.0); // Delta scale against 60fps standard
+      lastFrameTime = now;
+
+      // ----------------------------------------------------------------------
+      // LAYER 0: BACKGROUND STARS
+      // ----------------------------------------------------------------------
+      bgCtx.clearRect(0, 0, width, height);
+
+      // Render Starfield
+      for (let star of stars) {
+        star.phase += star.twinkleSpeed * delta;
+        const alpha = star.baseAlpha + Math.sin(star.phase) * 0.3;
+
+        bgCtx.save();
+        bgCtx.globalAlpha = Math.max(0.1, Math.min(1, alpha));
+        bgCtx.fillStyle = star.color;
+        bgCtx.beginPath();
+        bgCtx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        bgCtx.fill();
+        bgCtx.restore();
+      }
+
+      // Render Shooting Stars
+      spawnShootingStar();
+      for (let i = shootingStars.length - 1; i >= 0; i--) {
+        const ss = shootingStars[i];
+        ss.x += Math.cos(ss.angle) * ss.speed * delta;
+        ss.y += Math.sin(ss.angle) * ss.speed * delta;
+        ss.alpha -= 0.015 * delta;
+
+        if (ss.alpha <= 0) {
+          shootingStars.splice(i, 1);
+          continue;
+        }
+
+        bgCtx.save();
+        bgCtx.globalAlpha = ss.alpha;
+        bgCtx.strokeStyle = ss.color;
+        bgCtx.lineWidth = 1.5;
+        bgCtx.beginPath();
+        bgCtx.moveTo(ss.x, ss.y);
+        bgCtx.lineTo(ss.x - Math.cos(ss.angle) * ss.length, ss.y - Math.sin(ss.angle) * ss.length);
+        bgCtx.stroke();
+        bgCtx.restore();
+      }
+
+      // ----------------------------------------------------------------------
+      // LAYER 1: FOREGROUND HEART PARTICLES & TRAILS
+      // ----------------------------------------------------------------------
+      fgCtx.clearRect(0, 0, width, height);
+      fgCtx.globalCompositeOperation = 'lighter'; // Soft Bloom Blend
+
+      // Render Explosive Particles
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.update(delta);
+        p.draw(fgCtx);
+        if (p.life <= 0) particles.splice(i, 1);
+      }
+
+      // Render Touch Trails
+      for (let i = stardustTrail.length - 1; i >= 0; i--) {
+        const t = stardustTrail[i];
+        t.life -= delta;
+        if (t.life <= 0) {
+          stardustTrail.splice(i, 1);
+          continue;
+        }
+
+        const alpha = Math.max(0, t.life / t.maxLife);
+        fgCtx.save();
+        fgCtx.globalAlpha = alpha;
+        fgCtx.fillStyle = t.color;
+        fgCtx.font = `${t.size}px sans-serif`;
+        fgCtx.fillText('♥', t.x, t.y);
+        fgCtx.restore();
+      }
+
+      requestAnimationFrame(renderLoop);
+    }
+
+    /* ========================================================================
+       4. INTERACTIVE JOURNEY & DOM LOGIC
+       ======================================================================== */
+    let tapCount = 0;
+    let isSkyActive = false;
+
+    // Apply Configuration Values to DOM
+    document.getElementById('openingTitleDisplay').textContent = CONFIG.openingMessage;
+    document.getElementById('recipientDisplayName').textContent = CONFIG.recipientName;
+    document.getElementById('subtitleDisplay').textContent = CONFIG.subtitleMessage;
+    document.getElementById('finalLetterTitleDisplay').textContent = CONFIG.finalLetterTitle;
+    document.getElementById('finalClosingDisplay').textContent = CONFIG.finalClosing;
+    document.getElementById('signatureName').textContent = CONFIG.senderName;
+
+    // Spawn Floating Romantic Text Balloons
+    function spawnFloatingPhrase(x, y) {
+      const phrase = CONFIG.floatingPhrases[Math.floor(Math.random() * CONFIG.floatingPhrases.length)];
+      const el = document.createElement('div');
+      el.className = 'floating-phrase';
+      el.textContent = phrase;
+
+      const clampedX = Math.max(120, Math.min(width - 120, x));
+      const clampedY = Math.max(80, Math.min(height - 80, y));
+
+      el.style.left = `${clampedX}px`;
+      el.style.top = `${clampedY}px`;
+      el.style.color = CONFIG.particleColors[Math.floor(Math.random() * CONFIG.particleColors.length)];
+
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 4200);
+    }
+
+    // Step 1 -> Step 2: Transition
+    function enterGalaxy() {
+      const openingCard = document.getElementById('openingCard');
+      const skyHud = document.getElementById('skyHud');
+
+      triggerHeartBurst(width / 2, height / 2, 18, 200);
+      setTimeout(() => triggerHeartBurst(width * 0.3, height * 0.4, 13, 120), 220);
+      setTimeout(() => triggerHeartBurst(width * 0.7, height * 0.4, 13, 120), 440);
+
+      openingCard.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        openingCard.style.display = 'none';
+        skyHud.classList.remove('opacity-0');
+        skyHud.classList.add('opacity-100');
+        isSkyActive = true;
+      }, 700);
+    }
+
+    // Handle Tap Mechanics
+    function handleTap(x, y) {
+      if (!isSkyActive) return;
+
+      tapCount++;
+      document.getElementById('tapCounterDisplay').textContent = Math.min(tapCount, 5);
+
+      triggerHeartBurst(x, y, Math.random() * 5 + 10, 120);
+      spawnFloatingPhrase(x, y);
+
+      if (tapCount >= 5) {
+        const prompt = document.getElementById('finalLetterPrompt');
+        prompt.classList.remove('translate-y-20', 'opacity-0');
+        prompt.classList.add('translate-y-0', 'opacity-100');
+      }
+    }
+
+    // Center Hero Card Click (Multi-Ring Mega Explosion)
+    document.getElementById('heroMsgContainer').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const rect = e.currentTarget.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      triggerHeartBurst(centerX, centerY, 24, 250);
+      setTimeout(() => triggerHeartBurst(centerX - 100, centerY - 50, 15, 120), 180);
+      setTimeout(() => triggerHeartBurst(centerX + 100, centerY - 50, 15, 120), 360);
+
+      handleTap(centerX, centerY);
+    });
+
+    // Opening Card Trigger
+    document.getElementById('openingCard').addEventListener('click', () => {
+      audio.init();
+      if (audio.isMuted) audio.toggleMute();
+      enterGalaxy();
+    });
+
+    // Pointer Tap Handling
+    window.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('#letterModal') || e.target.closest('#openingCard') || e.target.closest('#soundToggleBtn')) return;
+      if (isSkyActive) handleTap(e.clientX, e.clientY);
+    });
+
+    // Pointer Drag Handling
+    window.addEventListener('pointermove', (e) => {
+      if (isSkyActive) addStardust(e.clientX, e.clientY);
+    });
+
+    /* ========================================================================
+       5. TYPEWRITER REVEAL ENGINE & MODAL LOGIC
+       ======================================================================== */
+    const modal = document.getElementById('letterModal');
+    const typewriterEl = document.getElementById('typewriterBody');
+    let typewriterTimeout = null;
+
+    function startTypewriter(text) {
+      typewriterEl.textContent = '';
+      let i = 0;
+
+      function typeChar() {
+        if (i < text.length) {
+          const char = text.charAt(i);
+          typewriterEl.textContent += char;
+          if (char !== ' ' && char !== '\n' && Math.random() > 0.4) {
+            audio.playTypewriterTone();
+          }
+          i++;
+          typewriterTimeout = setTimeout(typeChar, 26);
+        }
+      }
+      typeChar();
+    }
+
+    document.getElementById('readFinalLetterBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      modal.classList.remove('opacity-0', 'pointer-events-none', 'scale-95');
+      modal.classList.add('opacity-100', 'pointer-events-auto', 'scale-100');
+
+      // Grand Celestial Celebration Burst
+      triggerHeartBurst(width / 2, height / 3, 22, 220);
+      setTimeout(() => triggerHeartBurst(width * 0.25, height * 0.5, 15, 130), 200);
+      setTimeout(() => triggerHeartBurst(width * 0.75, height * 0.5, 15, 130), 400);
+
+      startTypewriter(CONFIG.finalLetterBody);
+    });
+
+    function closeModal() {
+      if (typewriterTimeout) clearTimeout(typewriterTimeout);
+      modal.classList.remove('opacity-100', 'pointer-events-auto', 'scale-100');
+      modal.classList.add('opacity-0', 'pointer-events-none', 'scale-95');
+    }
+
+    document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+
+    document.getElementById('replayModalBtn').addEventListener('click', () => {
+      if (typewriterTimeout) clearTimeout(typewriterTimeout);
+      startTypewriter(CONFIG.finalLetterBody);
+      triggerHeartBurst(width / 2, height / 2, 20, 200);
+    });
+
+    /* ========================================================================
+       6. SOUND TOGGLE LOGIC
+       ======================================================================== */
+    const soundToggleBtn = document.getElementById('soundToggleBtn');
+    const soundIcon = document.getElementById('soundIcon');
+
+    soundToggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isMuted = audio.toggleMute();
+      if (isMuted) {
+        soundIcon.className = 'fa-solid fa-volume-xmark text-base transition-colors';
+      } else {
+        soundIcon.className = 'fa-solid fa-volume-high text-base text-electricBlue transition-colors';
+      }
+    });
+
+    /* ========================================================================
+       7. WINDOW RESIZE & INIT
+       ======================================================================== */
+    window.addEventListener('resize', resizeCanvas);
+
+    window.onload = () => {
+      resizeCanvas();
+      requestAnimationFrame(renderLoop);
+    };
+  </script>
+</body>
+</html>
